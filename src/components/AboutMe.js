@@ -21,7 +21,7 @@ const Label = styled.h2`
 `;
 
 const Resume = styled.button`
-  width: 10%;
+  width: 100px;
   background-color: #4cb781;
   font-family: 'Indie Flower', cursive;
   color: #ffffff;
@@ -34,9 +34,6 @@ const Resume = styled.button`
     transform: scale(1.02);
     background-color: lighten(#4cb781, 30%);
   }
-  input:focus {
-    outline: none !important;
-  }
 `;
 const BaseLogo = styled.img`
   height: 2em;
@@ -44,11 +41,30 @@ const BaseLogo = styled.img`
   color: #fff;
 `;
 
+const Email = styled.a`
+  width: 100px;
+  background-color: #4cb781;
+  font-family: 'Indie Flower', cursive;
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: none;
+  border-radius: 10px;
+  :hover {
+    transform: scale(1.02);
+    background-color: lighten(#4cb781, 30%);
+  }
+`;
+
 const AboutMe = () => {
   return (
     <Wrapper>
       <Label>About Me</Label>
       <Resume>Resumé</Resume>
+      <Email href={"mailto:anirvan.awatramani@gmail.com"}>Email Me</Email>
       <BaseLogo src={mouse} alt="mouse logo" />
     </Wrapper>
   );
