@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "express": "^4.15.3",
+    "forever": "^0.15.3",
     "fullpage-react": "^3.0.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
