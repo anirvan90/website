@@ -30,7 +30,7 @@ const Name = styled.div`
 
 const Title = styled.div`
   font-family: 'Indie Flower', cursive;
-  font-size: 50px;
+  font-size: 45px;
   color: white;
 `;
 
@@ -70,7 +70,7 @@ const Landing = () => {
     <ComponentWrap>
       <TextWrap>
         <Name>Anirvan Awatramani</Name>
-        <Title>Full Stack Engineer</Title>
+        <Title>Software Engineer</Title>
       </TextWrap>
       <LogoTray>
         <a href={urls.gitHub} target={urls.open}>

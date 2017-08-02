@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import Landing from "./components/Landing";
 import AboutMe from "./components/AboutMe";
-import GetInTouch from "./components/GetInTouch";
-import InstaSpot from "./components/InstaSpot";
+import Instagram from "./components/Instagram";
+import Spotify from "./components/Spotify";
 import { Fullpage, Slide } from "fullpage-react";
 
 import "./App.css";
@@ -22,10 +22,10 @@ const slides = [
     <AboutMe />
   </Slide>,
   <Slide>
-    <GetInTouch />
+    <Instagram />
   </Slide>,
   <Slide>
-    <InstaSpot />
+    <Spotify />
   </Slide>
 ];
 
