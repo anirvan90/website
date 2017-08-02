@@ -1,5 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
+import Instafeed from "react-instafeed";
+import config from "../config";
+
+const instafeedTarget = "instafeed";
 
 const Wrapper = styled.div`
   background-image: url(https://s3-us-west-1.amazonaws.com/anirvan90-images/IMG_1969.png);
@@ -27,13 +31,30 @@ const Text = styled.div`
   justify-content: center;
 `;
 
-const Instagram = () => {
-  return (
-    <Wrapper>
-      <Title>Instagram Feed</Title>
-      <Text>Coming Soon</Text>
-    </Wrapper>
-  );
-};
+class Instagram extends Component {
+  render() {
+    console.log(process.env.PORT);
+    return (
+      <Wrapper>
+        <Title>Instagram Feed</Title>
+        <Text>Coming Soon</Text>
+        <div id={instafeedTarget}>
+          {console.log("hi")}
+          <Instafeed
+            limit="5"
+            ref="instafeed"
+            resolution="standard_resolution"
+            sortBy="most-recent"
+            target={instafeedTarget}
+            template=""
+            userId="anirvan90"
+            clientId={config.client_id}
+            accessToken={config.access_token}
+          />
+        </div>
+      </Wrapper>
+    );
+  }
+}
 
 export default Instagram;
