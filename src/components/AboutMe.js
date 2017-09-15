@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const Label = styled.h2`
   grid-row: 1/2;
-  font-family: 'Pacifico', serif;
+  font-family: "Pacifico", serif;
   color: #ffffff;
   font-size: 50px;
   display: flex;
@@ -34,11 +34,11 @@ const About = styled.p`
   margin-right: 100px;
   overflow: scroll;
   grid-column: 2/3;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #f6f6ef;
   font-size: 16px;
   font-weight: bold;
-  background: rgba(0, 0, 0, .65);
+  background: rgba(0, 0, 0, 0.65);
 `;
 
 const Profile = styled.img`
@@ -60,7 +60,7 @@ const Button = styled.a`
   width: 100px;
   height: 20px;
   background-color: #4cb781;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   color: #ffffff;
   font-size: 1em;
   line-height: 24px;
@@ -83,7 +83,7 @@ const AboutMe = () => {
         <Profile src={profile} />
         <About>
           <p style={{ fontSize: "20x" }}>Change Is Constant...</p>
-          I'm a full-stack JS developer. My intersts include music, photography
+          I'm a full-stack JS developer. My interests include music, photography
           and food. When I'm not inside writing promises you can find me riding
           a bike or climbing some rocks, diving around exotic reefs or imparting
           wisdom.
