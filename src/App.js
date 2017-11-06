@@ -9,7 +9,7 @@ import { Fullpage, Slide } from "fullpage-react";
 import "./App.css";
 
 const fullPageOptions = {
-  scrollSensitivity: 2,
+  scrollSensitivity: 7,
   touchSensitivity: 7,
   enableArrowKeys: true
 };
