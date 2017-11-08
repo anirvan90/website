@@ -89,7 +89,7 @@ const AboutMe = () => {
           wisdom.
           <p>
             In the last 7 years I've moved around from Lancaster, Madrid,
-            Shanghai, New York City, New Orleans, Mumbai & San Francisco.
+            Shanghai, New York City, New Orleans, San Francisco and now Toronto.
           </p>
           <p>
             My educational background is Finance and I've worked across Finance,
