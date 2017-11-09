@@ -43,6 +43,7 @@ const Title = styled.div`
 `;
 
 const LogoTray = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   height: 20%;

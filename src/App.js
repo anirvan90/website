@@ -10,7 +10,7 @@ import "./App.css";
 
 const fullPageOptions = {
   scrollSensitivity: 7,
-  touchSensitivity: 7,
+  touchSensitivity: 2,
   enableArrowKeys: true
 };
 
