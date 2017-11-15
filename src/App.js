@@ -41,7 +41,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Fullpage {...fullPageOptions} />
+        <Fullpage
+          onSlideChangeStart={() => {
+            ReactGA.event({
+              category: "Page Scroll",
+              action: "Page Scrolled"
+            });
+          }}
+          {...fullPageOptions}
+        />
       </div>
     );
   }
