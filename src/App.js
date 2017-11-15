@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactGA from "react-ga";
 import logo from "./logo.svg";
 import Landing from "./components/Landing";
 import AboutMe from "./components/AboutMe";
@@ -32,6 +33,11 @@ const slides = [
 fullPageOptions.slides = slides;
 
 class App extends Component {
+  constructor() {
+    super();
+    ReactGA.initialize("UA-109666476-1");
+    ReactGA.pageview(window.location.pathname);
+  }
   render() {
     return (
       <div>

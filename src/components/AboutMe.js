@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import styled from "styled-components";
 import profile from "../images/profile.png";
 
@@ -74,6 +75,26 @@ const Button = styled.a`
     background-color: lighten(#4cb781, 30%);
   }
 `;
+function handleResumeClick() {
+  ReactGA.event({
+    category: "Download",
+    action: "Resume Downloaded"
+  });
+}
+
+function handleEmailClick() {
+  ReactGA.event({
+    category: "Email",
+    action: "Email Me Clicked"
+  });
+}
+
+function handleProjectClick() {
+  ReactGA.event({
+    category: "Project",
+    action: "Grouper Project viewed"
+  });
+}
 
 const AboutMe = () => {
   return (
@@ -108,6 +129,9 @@ const AboutMe = () => {
       </Content>
       <Footer>
         <Button
+          onClick={() => {
+            handleResumeClick();
+          }}
           href={
             "https://s3-us-west-1.amazonaws.com/anirvan90-images/AnirvanAwatramani.pdf"
           }
@@ -115,8 +139,21 @@ const AboutMe = () => {
         >
           Resumé
         </Button>
-        <Button href={"mailto:anirvan.awatramani@gmail.com"}>Email Me</Button>
-        <Button href={"http://bit.ly/2qGruper"} target="_blank">
+        <Button
+          onClick={() => {
+            handleEmailClick();
+          }}
+          href={"mailto:anirvan.awatramani@gmail.com"}
+        >
+          Email Me
+        </Button>
+        <Button
+          onClick={() => {
+            handleProjectClick();
+          }}
+          href={"http://bit.ly/2qGruper"}
+          target="_blank"
+        >
           Grouper
         </Button>
       </Footer>

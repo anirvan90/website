@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import styled from "styled-components";
 import Particles from "react-particles-js";
 import git from "../images/github.svg";
@@ -191,16 +192,52 @@ const Landing = () => {
         <Title>Software Engineer</Title>
       </TextWrap>
       <LogoTray>
-        <a href={urls.gitHub} target={urls.open}>
+        <a
+          onClick={() => {
+            ReactGA.event({
+              category: "Social Link Clicked",
+              action: "Github profile visited"
+            });
+          }}
+          href={urls.gitHub}
+          target={urls.open}
+        >
           <Logo src={git} alt="social-logo" href={urls.gitHub} />
         </a>
-        <a href={urls.linkedIn} target={urls.open}>
+        <a
+          onClick={() => {
+            ReactGA.event({
+              category: "Social Link Clicked",
+              action: "LinkedIn profile visited"
+            });
+          }}
+          href={urls.linkedIn}
+          target={urls.open}
+        >
           <Logo src={linkedin} alt="social-logo" />
         </a>
-        <a href={urls.twitter} target={urls.open}>
+        <a
+          onClick={() => {
+            ReactGA.event({
+              category: "Social Link Clicked",
+              action: "Twitter profile visited"
+            });
+          }}
+          href={urls.twitter}
+          target={urls.open}
+        >
           <Logo src={twitter} alt="social-logo" />
         </a>
-        <a href={urls.instagram} target={urls.open}>
+        <a
+          onClick={() => {
+            ReactGA.event({
+              category: "Social Link Clicked",
+              action: "Instagram profile visited"
+            });
+          }}
+          href={urls.instagram}
+          target={urls.open}
+        >
           <Logo src={insta} alt="social-logo" />
         </a>
       </LogoTray>
