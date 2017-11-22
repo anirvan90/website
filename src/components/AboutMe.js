@@ -75,26 +75,6 @@ const Button = styled.a`
     background-color: lighten(#4cb781, 30%);
   }
 `;
-function handleResumeClick() {
-  ReactGA.event({
-    category: "Download",
-    action: "Resume Downloaded"
-  });
-}
-
-function handleEmailClick() {
-  ReactGA.event({
-    category: "Email",
-    action: "Email Me Clicked"
-  });
-}
-
-function handleProjectClick() {
-  ReactGA.event({
-    category: "Project",
-    action: "Grouper Project viewed"
-  });
-}
 
 const AboutMe = () => {
   return (
@@ -106,11 +86,11 @@ const AboutMe = () => {
           <p style={{ fontSize: "20x" }}>Change Is Constant...</p>
           I'm a full-stack JS developer. My interests include music, photography
           and food. When I'm not inside writing promises you can find me riding
-          a bike or climbing some rocks, diving around exotic reefs or imparting
+          a bike, climbing some rocks, diving around exotic reefs or imparting
           wisdom.
           <p>
-            In the last 7 years I've moved around from Lancaster, Madrid,
-            Shanghai, New York City, New Orleans, San Francisco and now Toronto.
+            In the last 7 years I've moved lived in Pennsylavania, Madrid,
+            Shanghai, New York City, New Orleans, San Francisco and Toronto.
           </p>
           <p>
             My educational background is Finance and I've worked across Finance,
@@ -118,8 +98,8 @@ const AboutMe = () => {
           </p>
           <p>Technologies I Love: React/Redux, NodeJS, Go, and AWS</p>
           <p>
-            I'm always building a side project, to see what I've worked on most
-            recently check Grouper below.
+            I'm always working on a side project, to see what I've worked on
+            most recently check Grouper below.
           </p>
           <p>
             Feel free to download my Resumé, checkout my GitHub or send me an
@@ -130,7 +110,10 @@ const AboutMe = () => {
       <Footer>
         <Button
           onClick={() => {
-            handleResumeClick();
+            ReactGA.event({
+              category: "Download",
+              action: "Resume Downloaded"
+            });
           }}
           href={
             "https://s3-us-west-1.amazonaws.com/anirvan90-images/AnirvanAwatramani.pdf"
@@ -141,7 +124,10 @@ const AboutMe = () => {
         </Button>
         <Button
           onClick={() => {
-            handleEmailClick();
+            ReactGA.event({
+              category: "Email",
+              action: "Email Me Clicked"
+            });
           }}
           href={"mailto:anirvan.awatramani@gmail.com"}
         >
@@ -149,7 +135,10 @@ const AboutMe = () => {
         </Button>
         <Button
           onClick={() => {
-            handleProjectClick();
+            ReactGA.event({
+              category: "Project",
+              action: "Grouper Project viewed"
+            });
           }}
           href={"http://bit.ly/2qGruper"}
           target="_blank"

@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Instafeed from "react-instafeed";
 import config from "../config.js";
-
-const instafeedTarget = "instafeed";
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const SpotifyHeader = styled.div`
-  font-family: 'Pacifico', serif;
+  font-family: "Pacifico", serif;
   color: #ffffff;
   font-size: 50px;
 `;
@@ -28,7 +25,7 @@ const SpotifyPlayer = styled.iframe`
   height: 50%;
   padding-botton: 30px;
 `;
-const Spotify = () =>
+const Spotify = () => (
   <Wrapper>
     <SpotifyHeader>What I'm Listening To</SpotifyHeader>
     <SpotifyPlayer
@@ -44,6 +41,7 @@ const Spotify = () =>
       frameBorder="0"
       allowTransparency="true"
     />
-  </Wrapper>;
+  </Wrapper>
+);
 
 export default Spotify;

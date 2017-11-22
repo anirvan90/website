@@ -18,14 +18,14 @@ const Title = styled.h2`
   display: flex;
   justify-content: center;
   width: 100%;
-  font-family: 'Pacifico', serif;
+  font-family: "Pacifico", serif;
   color: #fffafa;
   font-size: 50px;
 `;
 
 const Text = styled.div`
   display: flex;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 30px;
   color: #fffafa;
   justify-content: center;
@@ -33,13 +33,11 @@ const Text = styled.div`
 
 class Instagram extends Component {
   render() {
-    console.log(process.env.PORT);
     return (
       <Wrapper>
         <Title>Instagram Feed</Title>
         <Text>Coming Soon</Text>
         <div id={instafeedTarget}>
-          {console.log("hi")}
           <Instafeed
             limit="5"
             ref="instafeed"
